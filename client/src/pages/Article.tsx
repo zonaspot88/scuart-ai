@@ -203,7 +203,7 @@ export default function Article() {
                 
                 <div className="relative p-6 rounded-xl bg-card border border-border/50">
                   <h3 className="text-lg font-bold mb-4">About the Author</h3>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 mb-4">
                     <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
                       <User className="w-8 h-8 text-white" />
                     </div>
@@ -212,6 +212,16 @@ export default function Article() {
                       <div className="text-foreground/60">{article.authorRole}</div>
                     </div>
                   </div>
+                  {article.originalAuthor && (
+                    <div className="pt-4 border-t border-border/50">
+                      <p className="text-sm text-foreground/50">
+                        Original content by <span className="text-primary font-medium">{article.originalAuthor}</span>
+                        {article.originalSource && (
+                          <> from <span className="text-accent">{article.originalSource}</span></>
+                        )}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
 

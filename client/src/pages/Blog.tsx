@@ -155,14 +155,19 @@ export default function Blog() {
 
                   {/* Newsletter */}
                   <div className="mt-8 p-6 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20">
-                    <h4 className="font-semibold mb-2">Subscribe to IAPulse</h4>
+                    <h4 className="font-semibold mb-2">Subscribe to Scuart</h4>
                     <p className="text-sm text-foreground/60 mb-4">Get the latest AI news delivered to your inbox.</p>
-                    <input
-                      type="email"
-                      placeholder="your@email.com"
-                      className="w-full px-4 py-2 rounded-lg bg-background/50 border border-border text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-primary"
-                    />
-                    <Button className="btn-cyan w-full">Subscribe</Button>
+                    <form action="https://formspree.io/f/xpwzgkqr" method="POST" className="space-y-3">
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        placeholder="your@email.com"
+                        className="w-full px-4 py-2 rounded-lg bg-background/50 border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                      <input type="hidden" name="_subject" value="New Scuart Newsletter Subscription" />
+                      <Button type="submit" className="btn-cyan w-full">Subscribe</Button>
+                    </form>
                   </div>
                 </div>
               </div>
