@@ -1,13 +1,26 @@
 import { Separator } from "@/components/ui/separator";
 import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 export default function Footer() {
+  const [location, setLocation] = useLocation();
+
   const scrollToSection = (href: string) => {
     if (href.startsWith("#")) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+      // If we're not on the home page, navigate there first
+      if (location !== "/") {
+        setLocation("/");
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      } else {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
       }
     }
   };
@@ -22,7 +35,7 @@ export default function Footer() {
               Scuart
             </Link>
             <p className="text-foreground/60 text-sm leading-relaxed">
-              We create web and mobile applications that drive businesses.
+              We create web and mobile applications that drive businesses. Premium design, robust code, and measurable results.
             </p>
           </div>
 
@@ -51,6 +64,14 @@ export default function Footer() {
                   onClick={() => scrollToSection("#services")}
                   className="text-foreground/60 hover:text-primary transition-colors"
                 >
+                  AI Integration
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("#services")}
+                  className="text-foreground/60 hover:text-primary transition-colors"
+                >
                   UI/UX Design
                 </button>
               </li>
@@ -70,12 +91,12 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("#blog")}
+                <Link
+                  href="/blog"
                   className="text-foreground/60 hover:text-primary transition-colors"
                 >
-                  Blog
-                </button>
+                  Blog / IAPulse
+                </Link>
               </li>
               <li>
                 <button
@@ -132,14 +153,14 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-foreground/60">
-          <p>© 2024 Scuart. All rights reserved.</p>
+          <p>© 2026 Scuart. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary transition-colors">
+            <Link href="/privacy-policy" className="hover:text-primary transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
+            </Link>
+            <Link href="/terms-conditions" className="hover:text-primary transition-colors">
               Terms & Conditions
-            </a>
+            </Link>
           </div>
         </div>
       </div>
