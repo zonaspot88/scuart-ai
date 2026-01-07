@@ -14,14 +14,33 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
 
-    toast.success("Message sent!", {
-      description: "We'll get back to you within 24 hours.",
-    });
+    try {
+      const response = await fetch("https://formspree.io/f/aptitud10@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+      if (response.ok) {
+        toast.success("Message sent successfully!", {
+          description: "We'll get back to you within 24 hours.",
+        });
+        form.reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast.error("Failed to send message", {
+        description: "Please try again or contact us via WhatsApp.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -88,10 +107,10 @@ export default function ContactSection() {
                     <div>
                       <div className="font-semibold mb-1">Email</div>
                       <a
-                        href="mailto:hello@scuart.com"
+                        href="mailto:aptitud10@gmail.com"
                         className="text-foreground/70 hover:text-primary transition-colors"
                       >
-                        hello@scuart.com
+                        aptitud10@gmail.com
                       </a>
                     </div>
                   </div>
@@ -149,7 +168,12 @@ export default function ContactSection() {
               {/* Glowing Border */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-accent to-primary rounded-2xl opacity-30 group-hover:opacity-50 blur transition-all duration-500" />
               
-              <form onSubmit={handleSubmit} className="relative p-8 md:p-10 rounded-2xl bg-card border border-border/50 space-y-6">
+              <form 
+                onSubmit={handleSubmit} 
+                action="https://formspree.io/f/aptitud10@gmail.com"
+                method="POST"
+                className="relative p-8 md:p-10 rounded-2xl bg-card border border-border/50 space-y-6"
+              >
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                     <Send className="w-5 h-5 text-white" />
