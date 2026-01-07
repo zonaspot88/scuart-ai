@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
@@ -66,6 +67,9 @@ export default function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] bg-card border-border">
+            <SheetTitle asChild>
+              <VisuallyHidden>Navigation Menu</VisuallyHidden>
+            </SheetTitle>
             <div className="flex flex-col gap-6 mt-8">
               <Link href="/" className="text-2xl font-bold neon-cyan">
                 Scuart
