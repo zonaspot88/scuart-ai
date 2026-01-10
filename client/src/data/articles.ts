@@ -1072,7 +1072,7 @@ The stakes could not be higher. Success in 2026 would validate Musk's vision and
     title: "Meta Acquires Manus AI for $2 Billion",
     category: "News",
     excerpt: "In one of the most significant acquisitions in the tech sector, Meta Platforms has completed the purchase of Manus AI, the autonomous agents startup that revolutionized the industry in 2025.",
-    image: "https://images.unsplash.com/photo-1636114673156-052a83459fc1?w=1200&h=630&fit=crop",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&h=630&fit=crop",
     author: "William Perez",
     authorRole: "Editor in Chief",
     originalAuthor: "Pulso IA Editorial Team",
