@@ -1,10 +1,12 @@
-import React from 'react';
+import { Router, Route } from 'wouter';
 import Home from './pages/Home';
+import EtniaBraids from './pages/EtniaBraids';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Home />
-    </div>
+    <Router>
+      <Route path="/" component={Home} />
+      <Route path="/etnia" component={EtniaBraids} />
+    </Router>
   );
 }

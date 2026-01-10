@@ -694,12 +694,20 @@
     border: 1px solid var(--border);
   }
 
+  .border-border {
+    border-color: var(--border);
+  }
+
   .border-t {
     border-top: 1px solid var(--border);
   }
 
   .border-b {
     border-bottom: 1px solid var(--border);
+  }
+
+  .border-t {
+    border-top: 1px solid var(--border);
   }
 
   .rounded-lg {
