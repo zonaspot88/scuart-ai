@@ -10,7 +10,6 @@ const navLinks = [
   { href: "#portfolio", label: "Portfolio", isSection: true },
   { href: "#process", label: "Process", isSection: true },
   { href: "/blog", label: "Blog", isSection: false },
-  { href: "/about", label: "About", isSection: false },
   { href: "#contact", label: "Contact", isSection: true },
 ];
 
