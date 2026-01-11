@@ -49,19 +49,7 @@ export default function HeroSection() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8 fade-in delay-100">
             We Transform
             <br />
-            <span className="relative inline-block">
-              <span className="gradient-text-cyan-purple">Ideas into Digital</span>
-              {/* Underline decoration */}
-              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 400 12" fill="none">
-                <path d="M2 10C100 2 300 2 398 10" stroke="url(#gradient)" strokeWidth="3" strokeLinecap="round"/>
-                <defs>
-                  <linearGradient id="gradient" x1="0" y1="0" x2="400" y2="0">
-                    <stop offset="0%" stopColor="#00FFFF"/>
-                    <stop offset="100%" stopColor="#FF00FF"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-            </span>
+            <span className="gradient-text-cyan-purple">Ideas into Digital</span>
             <br />
             <span className="gradient-text-cyan-purple">Experiences</span>
           </h1>
