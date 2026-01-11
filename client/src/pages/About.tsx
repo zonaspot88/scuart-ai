@@ -49,7 +49,7 @@ const teamMembers = [
   {
     name: "Marcus Johnson",
     role: "Lead Designer",
-    bio: "Award-winning UI/UX designer with a passion for creating beautiful, functional interfaces that users love.",
+    bio: "UI/UX designer with a passion for creating beautiful, functional interfaces that users love.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     linkedin: "#",
     twitter: "#",
@@ -330,7 +330,7 @@ export default function About() {
                 <div className="space-y-4">
                   {[
                     "AI-first approach to every project",
-                    "Award-winning design team",
+                    "Exceptional design team",
                     "Transparent communication & pricing",
                     "Ongoing support & maintenance",
                     "Proven track record of success",
