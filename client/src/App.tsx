@@ -27,6 +27,7 @@ function Router() {
 }
 
 function App() {
+  // Version: We Transform Ideas into Digital Experiences
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
