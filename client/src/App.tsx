@@ -28,6 +28,7 @@ function Router() {
 
 function App() {
   // Version: We Transform Ideas into Digital Experiences
+  // Optimized: Removed scroll indicator, Our Team section, and Pricing
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
