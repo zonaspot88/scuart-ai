@@ -258,63 +258,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Team Section */}
-        <section className="py-20 bg-card/30">
-          <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-6">
-                <Users className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">Our Team</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Meet the <span className="gradient-text-cyan-purple">Experts</span>
-              </h2>
-              <p className="text-foreground/60">
-                Our talented team of designers, developers, and AI specialists are passionate about creating exceptional digital experiences.
-              </p>
-            </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="relative group">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-accent to-primary rounded-2xl opacity-0 group-hover:opacity-50 blur transition-all duration-500" />
-                  
-                  <div className="relative bg-card rounded-2xl overflow-hidden border border-border/50 group-hover:border-transparent transition-all duration-300">
-                    {/* Image */}
-                    <div className="relative h-64 overflow-hidden">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
-                      
-                      {/* Social Links */}
-                      <div className="absolute bottom-4 left-4 right-4 flex justify-center gap-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                        <a href={member.linkedin} className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-primary transition-colors">
-                          <Linkedin className="w-5 h-5" />
-                        </a>
-                        <a href={member.twitter} className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-primary transition-colors">
-                          <Twitter className="w-5 h-5" />
-                        </a>
-                        <a href={`mailto:${member.email}`} className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-primary transition-colors">
-                          <Mail className="w-5 h-5" />
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6">
-                      <h4 className="text-lg font-semibold mb-1">{member.name}</h4>
-                      <p className="text-primary text-sm font-medium mb-3">{member.role}</p>
-                      <p className="text-foreground/60 text-sm line-clamp-3">{member.bio}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Timeline / Journey */}
         <section className="py-20">
