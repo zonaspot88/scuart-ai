@@ -37,8 +37,9 @@ export default function Home() {
         
         <div className="container relative z-10 max-w-4xl">
           <div className="animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-serif font-bold leading-tight mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
-              We design modern websites that turn visitors into customers
+            <h1 className="text-5xl md:text-7xl font-serif font-bold leading-tight mb-6">
+              <span>We design modern websites that turn visitors into </span>
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">customers</span>
             </h1>
             <p className="text-lg text-muted mb-8 max-w-2xl">
               Strategic, fast, and clean web design built to help brands look professional and convert better.
